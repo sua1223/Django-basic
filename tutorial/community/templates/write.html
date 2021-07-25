@@ -7,4 +7,9 @@
 <body>
     hello django!
 </body>
+<form action = "" method="post">
+    {{form.as_p}}
+    {% csrf_token %}
+    <button type = "submit" class="btn btn-primary">저장</button>
+</form>
 </html>

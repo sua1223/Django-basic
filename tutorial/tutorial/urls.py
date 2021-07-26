@@ -18,7 +18,8 @@ from django.urls import path
 from community.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('write/', write, name = 'write'),
-    path('list', list, name = 'list'),
+    path(r'admin/', admin.site.urls),
+    path(r'write/', write, name = 'write'),
+    path(r'list/', list, name = 'list'),
+    path(r'^view/(?P<num>[0-9]+)/$', view),
 ]

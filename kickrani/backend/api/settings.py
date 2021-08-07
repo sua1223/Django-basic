@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'post', # post 앱 생성 후 추가
+    'main', # main 앱 생성
     'rest_framework', # DRF
     'corsheaders', # django-cors-headers
 ]
@@ -52,8 +52,8 @@ REST_FRAMEWORK = {
 }
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',     # corsheaders 추가
-    'django.middleware.common.CommonMiddleware', # corsheaders 추가
+     'corsheaders.middleware.CorsMiddleware', # corsheader 추가
+    'django.middleware.common.CommonMiddleware', # corsheader 추가
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -63,9 +63,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ORIGIN_WHITELIST = [
+# react 연결
+CORS_ORIGIN_WHITELIST = (
     'http://127.0.0.1:3000' ,'http://localhost:3000'
-] 
+)
 
 CORS_ALLOW_CREDENTIALS = True
 
